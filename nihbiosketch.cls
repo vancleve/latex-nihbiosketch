@@ -70,13 +70,13 @@
 \newcommand{\eracommons}[1]{\renewcommand{\@eracommons}{#1}}
 \newcommand{\position}[1]{\renewcommand{\@position}{#1}}
 
-\newcommand{\pgline}{\noindent\makebox[\linewidth]{\rule{\textwidth}{0.5pt}}\newline}
+\newcommand{\pgline}{\noindent\makebox[\linewidth]{\rule{\textwidth}{0.75pt}}\newline}
 
 \newcommand{\piinfo}
 {\pgline
 {\centering
 \textbf{\headersize BIOGRAPHICAL SKETCH}\\
-{\footnotesize
+{\scriptsize
 Provide the following information for the Senior/key personnel and other significant contributors.\\
 Follow this format for each person.  \textbf{DO NOT EXCEED FIVE PAGES}.\\}}
 \pgline
@@ -97,25 +97,26 @@ EDUCATION/TRAINING (\textit{Begin with baccalaureate or other initial profession
 \newenvironment{education}
 {\bgroup\centering
 \tabulinesep=1.5mm
+\tabulinestyle{0.75pt}
 \begin{tabu} to \textwidth {X[2.748,l,m]|X[1.125,c,m]|X[1,c,m]|X[1,c,m]|X[1.689,l,m]}
-\hline
+\tabucline{-}
 \rowfont[c]{}
 INSTITUTION AND LOCATION &
 DEGREE \newline (\textit{if applicable}) &
 Start Date MM/YYYY &
 Completion Date MM/YYYY &
 FIELD OF STUDY \\
-\hline}
+\tabucline{-}}
 {\end{tabu}\egroup}
 
 \newenvironment{datetbl}
 {\tabulinesep=0mm
-\begin{tabu} to 7.5in{X[1,l]X[6.5,l,p]}}
+\begin{tabu} to \textwidth {X[-1,l]X[6.5,l]}}
 {\end{tabu}}
 
 \newenvironment{datelngtbl}
 {\tabulinesep=0mm\vspace{-2ex} % should not be necessary
-\begin{longtabu} to 7.5in{X[1,l]X[6.5,l,p]}}
+\begin{longtabu} to \textwidth {X[-1,l]X[6.5,l]}}
 {\end{longtabu}}
 
 \newenvironment{statement}
